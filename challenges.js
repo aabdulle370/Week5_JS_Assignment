@@ -20,7 +20,13 @@ const fruits = ["apple", "banana", "orange"];
 
 // ✍️ Solve it here ✍️
 
+const fruits = ["apple", "banana", "orange"];
 
+fruits.push("mango");
+fruits.shift();
+
+console.log(fruits);
+console.log(fruits.length);
 
 
 /* ------------------------------------------------------------
@@ -35,11 +41,13 @@ const fruits = ["apple", "banana", "orange"];
    Hint: the forEach callback gets (item, index) as arguments.
    ------------------------------------------------------------ */
 
+
+
 const cities = ["Mogadishu", "Hargeisa", "Bosaso", "Garowe"];
 
-// ✍️ Solve it here ✍️
-
-
+cities.forEach(function(city, index) {
+  console.log((index + 1) + ". " + city);
+});
 
 
 /* ------------------------------------------------------------
@@ -55,6 +63,17 @@ const cities = ["Mogadishu", "Hargeisa", "Bosaso", "Garowe"];
 
 
 
+const student = {
+  name: "Fatuma",
+  age: 16,
+  isEnrolled: true
+};
+
+console.log(student.name);
+
+student.age = student.age + 1;
+
+console.log(student);
 
 /* ------------------------------------------------------------
    Task 4: Array of Objects 🎓
@@ -65,18 +84,21 @@ const cities = ["Mogadishu", "Hargeisa", "Bosaso", "Garowe"];
      "Khadija scored 85"
    ------------------------------------------------------------ */
 
-const students = [
-  { name: "Fatuma",  score: 92 },
-  { name: "Asha",    score: 68 },
-  { name: "Khadija", score: 85 }
-];
 
 // ✍️ Solve it here ✍️
 
 
 
+const students = [
+  { name: "Fatuma", score: 92 },
+  { name: "Asha", score: 68 },
+  { name: "Khadija", score: 85 }
+];
 
-/* ------------------------------------------------------------
+students.forEach(function(student) {
+  console.log(student.name + " scored " + student.score);
+});
+/* ----- -------------------------------------------------------
    🚀 STRETCH (optional)
 
    Use .forEach() to log only the names of students
